@@ -46,3 +46,12 @@ router.post('/', function(req, res) {
   console.log(newBeer.drink());
   res.send(beersDataStore.getAll());
 });
+
+/**
+ * Define a route for HTTP requests with a DELETE method sent to /beers.
+ * We expect all beers to be delete and to receive an empty JSON payload.
+ */
+router.delete('/', function(req, res) {
+  beersDataStore.deleteAll();
+  res.send(beersDataStore.getAll());
+});

@@ -17,14 +17,19 @@ var beers = [];
 
 var addBeer = function(beer) {
   beers.push(beer);
-}
+};
 
 var getAllBeers = function() {
   var clone = beers.slice(0);
   return clone;
-}
+};
+
+var deleteAllBeers = function() {
+  beers = [];
+};
 
 exports.beersDataStore = {
   add: addBeer,
-  getAll: getAllBeers
-}
+  getAll: getAllBeers,
+  deleteAll: deleteAllBeers
+};
