@@ -2,7 +2,8 @@
  * This module defines
  */
 
-var beers = [];
+var beers = [],
+    currentBeerIndex = 0;
 
 
 /**
@@ -16,7 +17,7 @@ var beers = [];
 
 
 var addBeer = function(beer) {
-  beer.id = beers.length;
+  beer.id = currentBeerIndex++;
   beers.push(beer);
 };
 
